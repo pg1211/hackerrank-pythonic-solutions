@@ -8,10 +8,9 @@ def func():
     marks_placement = next(i for i, x in enumerate(input().split()) if x == "MARKS")
 
     # now, iterate through rest of students and sum up marks 
-    total_marks = 0
-    for i in range(num_students):
-        total_marks += int(input().split()[marks_placement])
-        
+    total_marks = total_marks = sum(int(input().split()[marks_placement]) for _ in range(num_students))
+
+    # print it out!
     print(total_marks / num_students)
     
     
